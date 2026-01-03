@@ -8,6 +8,7 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { ChatProvider } from './context/ChatContext';
 import { Chatbot } from './components/ui/Chatbot';
+import { SEO } from './components/SEO';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -23,6 +24,7 @@ function App() {
     <Router>
       <ChatProvider>
         <ScrollToTop />
+        <SEO />
         <div className="min-h-screen flex flex-col font-sans text-art-charcoal bg-art-cream selection:bg-art-gold selection:text-white">
           <Navbar />
           <main className="flex-grow">
