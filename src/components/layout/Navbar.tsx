@@ -257,6 +257,8 @@ export const Navbar: React.FC = () => {
                                 </AnimatePresence>
                             </div>
 
+
+
                             {/* Contact with Dropdown */}
                             <div
                                 className="relative"

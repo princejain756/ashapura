@@ -11,7 +11,7 @@ export interface Artwork {
 export const artworkCategories: Category[] = ['All', 'Abstract', 'Nature', 'Portraits', 'Spiritual', 'Contemporary', 'Traditional'];
 
 export const artworks: Artwork[] = [
-    { id: 1, title: 'Abstract Red Mens', category: 'Abstract', price: '₹18,000', images: ['/artworks/abstract-art-in-red-men\'s-1.webp'] },
+    { id: 1, title: 'Abstract Red Mens', category: 'Abstract', price: '₹18,000', images: ['/artworks/abstract-art-in-red-men’s-1.webp'] },
     { id: 2, title: 'Golden Abstract', category: 'Abstract', price: '₹25,000', images: ['/artworks/abstract,-black-and-gold-foil-1.webp'] },
     { id: 3, title: 'Mystic Aghori', category: 'Traditional', price: '₹22,000', images: ['/artworks/aghori-1.webp', '/artworks/aghori-2.webp', '/artworks/aghori-3.webp', '/artworks/aghori-4.webp'] },
     { id: 4, title: 'Alcohol Rhythm', category: 'Abstract', price: '₹14,000', images: ['/artworks/alcohol-rhythm-1.webp'] },

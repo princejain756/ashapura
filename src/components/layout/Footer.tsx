@@ -24,6 +24,8 @@ export const Footer: React.FC = () => {
                             <NavLink to="/" className="text-sm hover:text-art-gold transition-colors">Home</NavLink>
                             <NavLink to="/portfolio" className="text-sm hover:text-art-gold transition-colors">Portfolio</NavLink>
                             <NavLink to="/about" className="text-sm hover:text-art-gold transition-colors">About Artist</NavLink>
+                            <NavLink to="/blog" className="text-sm hover:text-art-gold transition-colors">Blog</NavLink>
+                            <NavLink to="/faq" className="text-sm hover:text-art-gold transition-colors">FAQ</NavLink>
                             <NavLink to="/contact" className="text-sm hover:text-art-gold transition-colors">Contact</NavLink>
                         </div>
                     </div>
