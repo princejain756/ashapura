@@ -46,7 +46,7 @@ export const Portfolio: React.FC = () => {
             <div className="sticky top-20 z-30 bg-white/80 backdrop-blur-md border-b border-art-gold/10 mb-12">
                 <div className="max-w-7xl mx-auto px-6 py-4">
                     <div className="flex gap-2 md:gap-8 overflow-x-auto pb-2 scrollbar-hide justify-start md:justify-center">
-                        {artworkCategories.map((cat, idx) => (
+                        {artworkCategories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setFilter(cat)}
@@ -75,7 +75,7 @@ export const Portfolio: React.FC = () => {
                     className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
                 >
                     <AnimatePresence mode='popLayout'>
-                        {filteredArtworks.map((art, index) => (
+                        {filteredArtworks.map((art) => (
                             <motion.div
                                 layout
                                 key={art.id}

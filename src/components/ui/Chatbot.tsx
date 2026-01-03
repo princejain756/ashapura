@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Phone, Mail, Send, ChevronRight, MapPin, Palette, Image as ImageIcon } from 'lucide-react';
 import { useChat } from '../../context/ChatContext';
