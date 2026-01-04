@@ -66,10 +66,10 @@ export const Navbar: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className={`
                         relative flex justify-between items-center px-6 md:px-8 py-3 
-                        rounded-full transition-all duration-500
+                        rounded-full transition-all duration-500 ease-out
                         ${scrolled
-                            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-art-green/5 border border-art-gold/20'
-                            : 'bg-white/80 backdrop-blur-md shadow-sm border border-white/60'
+                            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-art-green/10 border border-art-gold/20 scale-[0.98]'
+                            : 'bg-transparent backdrop-blur-none shadow-none border border-transparent'
                         }
                     `}>
                         {/* Logo Area */}
