@@ -137,7 +137,7 @@ ${formData.name}`;
                                     <span className="text-xs sm:text-sm">@ashapura_art_studio</span>
                                 </a>
                                 <a
-                                    href="https://linkedin.com/in/pallavi-bhandari-jain"
+                                    href="https://www.linkedin.com/in/pallavi-jain-303b3923/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"

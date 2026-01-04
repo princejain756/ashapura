@@ -61,11 +61,14 @@ export const Footer: React.FC = () => {
                             <a href="https://instagram.com/ashapura_art_studio" target="_blank" rel="noopener noreferrer" className="p-2 hover:text-art-gold transition-colors tap-scale" title="Instagram">
                                 <Instagram size={24} />
                             </a>
-                            <a href="https://linkedin.com/in/pallavi-bhandari-jain" target="_blank" rel="noopener noreferrer" className="p-2 hover:text-art-gold transition-colors tap-scale" title="LinkedIn">
+                            <a href="https://www.linkedin.com/in/pallavi-jain-303b3923/" target="_blank" rel="noopener noreferrer" className="p-2 hover:text-art-gold transition-colors tap-scale" title="LinkedIn">
                                 <Linkedin size={24} />
                             </a>
                             <a href="https://www.facebook.com/pallaviartlove/" target="_blank" rel="noopener noreferrer" className="p-2 hover:text-art-gold transition-colors tap-scale" title="Facebook">
                                 <Facebook size={24} />
+                            </a>
+                            <a href="https://pin.it/5Exhvu4he" target="_blank" rel="noopener noreferrer" className="p-2 hover:text-art-gold transition-colors tap-scale" title="Pinterest">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12a4 4 0 1 0 8 0c0-3.5-2-6.5-4-8" /><path d="M8.5 14.5L7 21" /><circle cx="12" cy="12" r="10" /></svg>
                             </a>
                         </div>
                         <p className="text-xs text-art-cream/60">
