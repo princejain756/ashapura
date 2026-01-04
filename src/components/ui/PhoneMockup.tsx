@@ -64,14 +64,14 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
     };
 
     return (
-        <div className="relative mx-auto w-[280px] h-[560px] select-none">
+        <div className="relative mx-auto w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] lg:w-[280px] lg:h-[560px] select-none">
             {/* Help Button - Top */}
             <button
                 onClick={() => setShowHelp(!showHelp)}
-                className="absolute -top-8 left-1/2 -translate-x-1/2 p-1 text-art-charcoal/40 hover:text-art-gold transition-colors z-50"
+                className="absolute -top-6 sm:-top-8 left-1/2 -translate-x-1/2 p-1 text-art-charcoal/40 hover:text-art-gold transition-colors z-50"
                 aria-label="Help"
             >
-                <HelpCircle size={18} />
+                <HelpCircle size={16} />
             </button>
 
             {/* Help Tooltip */}
@@ -81,7 +81,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute -top-24 left-1/2 -translate-x-1/2 bg-art-charcoal text-white text-xs p-3 rounded-lg shadow-xl z-50 w-48 text-center"
+                        className="absolute -top-20 sm:-top-24 left-1/2 -translate-x-1/2 bg-art-charcoal text-white text-[10px] sm:text-xs p-2 sm:p-3 rounded-lg shadow-xl z-50 w-40 sm:w-48 text-center"
                     >
                         <button onClick={() => setShowHelp(false)} className="absolute top-1 right-1 p-0.5">
                             <X size={12} />
@@ -98,32 +98,32 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({
             {/* Volume Up - Top Left */}
             <button
                 onClick={() => handleVolumeChange(0.1)}
-                className="absolute left-[-3px] top-[100px] w-[3px] h-[35px] bg-art-charcoal/70 rounded-l-sm active:bg-art-gold transition-colors z-0"
+                className="absolute left-[-3px] top-[70px] sm:top-[85px] lg:top-[100px] w-[3px] h-[25px] sm:h-[30px] lg:h-[35px] bg-art-charcoal/70 rounded-l-sm active:bg-art-gold transition-colors z-0"
                 aria-label="Volume Up"
             />
             {/* Volume Down - Below Up */}
             <button
                 onClick={() => handleVolumeChange(-0.1)}
-                className="absolute left-[-3px] top-[145px] w-[3px] h-[35px] bg-art-charcoal/70 rounded-l-sm active:bg-art-gold transition-colors z-0"
+                className="absolute left-[-3px] top-[100px] sm:top-[120px] lg:top-[145px] w-[3px] h-[25px] sm:h-[30px] lg:h-[35px] bg-art-charcoal/70 rounded-l-sm active:bg-art-gold transition-colors z-0"
                 aria-label="Volume Down"
             />
 
             {/* Power Button - Right Side */}
             <button
                 onClick={togglePower}
-                className="absolute right-[-3px] top-[110px] w-[3px] h-[40px] bg-art-charcoal/70 rounded-r-sm active:bg-red-500 transition-colors z-0"
+                className="absolute right-[-3px] top-[80px] sm:top-[95px] lg:top-[110px] w-[3px] h-[30px] sm:h-[35px] lg:h-[40px] bg-art-charcoal/70 rounded-r-sm active:bg-red-500 transition-colors z-0"
                 aria-label="Power Button"
             />
 
             {/* Phone Frame */}
-            <div className="relative z-10 w-full h-full bg-[#1a1a1a] rounded-[2.5rem] shadow-2xl border-[6px] border-[#2a2a2a] overflow-hidden ring-1 ring-white/10">
+            <div className="relative z-10 w-full h-full bg-[#1a1a1a] rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl border-[4px] sm:border-[5px] lg:border-[6px] border-[#2a2a2a] overflow-hidden ring-1 ring-white/10">
                 {/* Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[22px] bg-[#1a1a1a] rounded-b-xl z-30 flex justify-center items-center">
-                    <div className="w-[40px] h-[3px] bg-[#111] rounded-full opacity-50" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70px] sm:w-[85px] lg:w-[100px] h-[16px] sm:h-[19px] lg:h-[22px] bg-[#1a1a1a] rounded-b-xl z-30 flex justify-center items-center">
+                    <div className="w-[28px] sm:w-[34px] lg:w-[40px] h-[2px] sm:h-[2.5px] lg:h-[3px] bg-[#111] rounded-full opacity-50" />
                 </div>
 
                 {/* Screen Content */}
-                <div className="relative w-full h-full bg-black overflow-hidden rounded-[2rem]">
+                <div className="relative w-full h-full bg-black overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] lg:rounded-[2rem]">
 
                     <AnimatePresence mode='wait'>
                         {isLocked ? (

@@ -70,16 +70,16 @@ ${formData.name}`;
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-serif text-art-green mb-4"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-art-green mb-3 sm:mb-4"
                     >
                         Get in Touch
                     </motion.h1>
-                    <p className="text-art-charcoal/70 max-w-xl mx-auto">
+                    <p className="text-art-charcoal/70 max-w-xl mx-auto text-base sm:text-lg px-4">
                         I would love to explore how my artwork can enhance the interiors of your spaces. Whether you're interested in a commission, a purchase, or just want to say hello — let's connect!
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-24 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -87,8 +87,8 @@ ${formData.name}`;
                         transition={{ delay: 0.2 }}
                         className="space-y-8"
                     >
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-art-green/5">
-                            <h3 className="text-2xl font-serif text-art-green mb-8">Contact Information</h3>
+                        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-art-green/5">
+                            <h3 className="text-xl sm:text-2xl font-serif text-art-green mb-6 sm:mb-8">Contact Information</h3>
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
                                     <div className="bg-art-green/10 p-3 rounded-full text-art-green">
@@ -124,35 +124,35 @@ ${formData.name}`;
                         </div>
 
                         {/* Social Links */}
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-art-green/5">
-                            <h3 className="text-xl font-serif text-art-green mb-6">Follow on Social</h3>
-                            <div className="flex flex-wrap gap-4">
+                        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-art-green/5">
+                            <h3 className="text-lg sm:text-xl font-serif text-art-green mb-4 sm:mb-6">Follow on Social</h3>
+                            <div className="flex flex-wrap gap-3 sm:gap-4">
                                 <a
                                     href="https://instagram.com/ashapura_art_studio"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-art-cream px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors"
+                                    className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"
                                 >
-                                    <Instagram size={20} className="text-art-green" />
-                                    <span className="text-sm">@ashapura_art_studio</span>
+                                    <Instagram size={18} className="text-art-green" />
+                                    <span className="text-xs sm:text-sm">@ashapura_art_studio</span>
                                 </a>
                                 <a
                                     href="https://linkedin.com/in/pallavi-bhandari-jain"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-art-cream px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors"
+                                    className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"
                                 >
-                                    <Linkedin size={20} className="text-art-green" />
-                                    <span className="text-sm">Pallavi Bhandari Jain</span>
+                                    <Linkedin size={18} className="text-art-green" />
+                                    <span className="text-xs sm:text-sm">Pallavi Bhandari Jain</span>
                                 </a>
                                 <a
                                     href="https://www.facebook.com/pallaviartlove/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-art-cream px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors"
+                                    className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"
                                 >
-                                    <Facebook size={20} className="text-art-green" />
-                                    <span className="text-sm">Ashapura Art Studio</span>
+                                    <Facebook size={18} className="text-art-green" />
+                                    <span className="text-xs sm:text-sm">Ashapura Art Studio</span>
                                 </a>
                             </div>
                         </div>
@@ -164,9 +164,9 @@ ${formData.name}`;
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                     >
-                        <form className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-art-gold">
-                            <h3 className="text-2xl font-serif text-art-green mb-6">Send a Message</h3>
-                            <div className="space-y-6">
+                        <form className="bg-white p-6 sm:p-8 rounded-lg shadow-xl border-t-4 border-art-gold">
+                            <h3 className="text-xl sm:text-2xl font-serif text-art-green mb-4 sm:mb-6">Send a Message</h3>
+                            <div className="space-y-4 sm:space-y-6">
                                 <div>
                                     <label className="block text-sm font-medium text-art-charcoal/70 mb-2">Your Name</label>
                                     <input
@@ -174,7 +174,7 @@ ${formData.name}`;
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors"
+                                        className="w-full px-4 py-3 sm:py-4 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors text-base"
                                         placeholder="Your name"
                                         required
                                     />
@@ -186,7 +186,7 @@ ${formData.name}`;
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors"
+                                        className="w-full px-4 py-3 sm:py-4 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors text-base"
                                         placeholder="your@email.com"
                                         required
                                     />
@@ -198,7 +198,7 @@ ${formData.name}`;
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors"
+                                        className="w-full px-4 py-3 sm:py-4 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors text-base"
                                         placeholder="+91 XXXXXXXXXX"
                                     />
                                 </div>
@@ -209,14 +209,14 @@ ${formData.name}`;
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors"
+                                        className="w-full px-4 py-3 sm:py-4 rounded-md bg-art-cream/20 border-b-2 border-art-green/10 focus:border-art-gold outline-none transition-colors resize-none text-base"
                                         placeholder="I'm interested in..."
                                         required
                                     />
                                 </div>
 
                                 {/* Two Submit Buttons */}
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                                     <Button
                                         type="button"
                                         onClick={handleWhatsApp}
@@ -254,14 +254,14 @@ ${formData.name}`;
                     transition={{ duration: 0.6 }}
                 >
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-serif text-art-green mb-2">Visit Our Studio</h2>
+                        <h2 className="text-2xl sm:text-3xl font-serif text-art-green mb-2">Visit Our Studio</h2>
                         <p className="text-art-charcoal/60">3-6-429/1/2, Himayat Nagar, Hyderabad, Telangana – 500029</p>
                     </div>
                     <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0674893366!2d78.4744!3d17.3950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99c8f6c3d4b9%3A0x8e6c7f4e9888d8e!2sHimayat%20Nagar%2C%20Hyderabad%2C%20Telangana%20500029!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                             width="100%"
-                            height="450"
+                            height="350"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
