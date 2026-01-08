@@ -61,15 +61,15 @@ export const Navbar: React.FC = () => {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-4 sm:py-6'}`}
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-6'}`}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto px-6">
                     <div className={`
-                        relative flex justify-between items-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 
-                        rounded-full transition-all duration-500 ease-out
+                        relative flex justify-between items-center px-6 md:px-8 py-3 
+                        rounded-full transition-all duration-500
                         ${scrolled
-                            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-art-green/10 border border-art-gold/20 scale-[0.98]'
-                            : 'bg-transparent backdrop-blur-none shadow-none border border-transparent'
+                            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-art-green/5 border border-art-gold/20'
+                            : 'bg-white/80 backdrop-blur-md shadow-sm border border-white/60'
                         }
                     `}>
                         {/* Logo Area */}
@@ -257,8 +257,6 @@ export const Navbar: React.FC = () => {
                                 </AnimatePresence>
                             </div>
 
-
-
                             {/* Contact with Dropdown */}
                             <div
                                 className="relative"
@@ -331,16 +329,13 @@ export const Navbar: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Mobile Menu Button - Dynamic positioning to fix scroll issues */}
-                        <div className="md:hidden relative z-50">
-                            <button
-                                onClick={() => setIsOpen(!isOpen)}
-                                className={`w-11 h-11 flex items-center justify-center rounded-full transition-all touch-target tap-scale ${isOpen ? 'bg-white/10 text-white shadow-lg' : 'bg-art-green/10 text-art-green'}`}
-                                aria-label={isOpen ? 'Close menu' : 'Open menu'}
-                            >
-                                {isOpen ? <X size={24} /> : <Menu size={22} />}
-                            </button>
-                        </div>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-art-green/10 text-art-green active:scale-95 transition-all"
+                        >
+                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
                     </div>
                 </div>
             </motion.nav>
@@ -372,7 +367,7 @@ export const Navbar: React.FC = () => {
                             ))}
                         </div>
 
-                        <div className="relative z-10 flex flex-col space-y-6 sm:space-y-8 text-center px-6">
+                        <div className="relative z-10 flex flex-col space-y-8 text-center">
                             {[
                                 { name: 'Home', path: '/' },
                                 { name: 'Portfolio', path: '/portfolio' },
@@ -383,12 +378,12 @@ export const Navbar: React.FC = () => {
                                     key={link.name}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.2 + idx * 0.08 }}
+                                    transition={{ delay: 0.2 + idx * 0.1 }}
                                 >
                                     <NavLink
                                         to={link.path}
                                         className={({ isActive }) =>
-                                            `text-3xl sm:text-4xl md:text-5xl font-serif tracking-wide transition-all tap-scale inline-block py-2 ${isActive ? 'text-art-gold italic' : 'text-white hover:text-art-gold active:text-art-gold'}`
+                                            `text-4xl md:text-5xl font-serif tracking-wide transition-colors ${isActive ? 'text-art-gold italic' : 'text-white hover:text-art-gold'}`
                                         }
                                     >
                                         {link.name}
@@ -397,43 +392,16 @@ export const Navbar: React.FC = () => {
                             ))}
                         </div>
 
-                        {/* Mobile Quick Actions */}
+                        {/* Mobile Contact Info */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 }}
-                            className="absolute bottom-8 sm:bottom-12 left-0 right-0 flex justify-center gap-4 sm:gap-6 px-6 safe-area-bottom"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="absolute bottom-12 flex items-center gap-6 text-white/70"
                         >
-                            <a
-                                href="tel:+919553339663"
-                                className="flex flex-col items-center gap-1.5 text-white/70 hover:text-art-gold transition-colors tap-scale"
-                            >
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                    <Phone size={20} />
-                                </div>
-                                <span className="text-xs">Call</span>
-                            </a>
-                            <a
-                                href="https://wa.me/919553339663"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex flex-col items-center gap-1.5 text-white/70 hover:text-art-gold transition-colors tap-scale"
-                            >
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                    <Mail size={20} />
-                                </div>
-                                <span className="text-xs">WhatsApp</span>
-                            </a>
-                            <a
-                                href="https://www.google.com/maps/search/?api=1&query=Himayat+Nagar+Hyderabad"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex flex-col items-center gap-1.5 text-white/70 hover:text-art-gold transition-colors tap-scale"
-                            >
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                    <MapPin size={20} />
-                                </div>
-                                <span className="text-xs">Directions</span>
+                            <a href="tel:+919553339663" className="flex items-center gap-2 hover:text-art-gold transition-colors">
+                                <Phone size={18} />
+                                <span className="text-sm">+91 9553339663</span>
                             </a>
                         </motion.div>
                     </motion.div>
