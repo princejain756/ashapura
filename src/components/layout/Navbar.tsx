@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
                                 <motion.img
                                     src="/logoweb.webp"
                                     alt="Asha Pura Studio"
-                                    className="w-12 h-12 md:w-16 md:h-16 object-contain relative z-10 transition-all duration-700"
+                                    className="w-10 h-10 md:w-16 md:h-16 object-contain relative z-10 transition-all duration-700"
                                     whileHover={{ scale: 1.1, rotate: 5 }}
                                     transition={{ type: "spring", stiffness: 400 }}
                                     style={{ filter: "drop-shadow(0 0 8px rgba(217, 164, 65, 0.2))" }}
