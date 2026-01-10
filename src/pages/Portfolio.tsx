@@ -24,7 +24,7 @@ export const Portfolio: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-art-cream/30 pt-24 pb-20">
+        <div className="min-h-screen bg-art-cream/30 pt-32 pb-20">
             {/* Header */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12 text-center">
                 <motion.div
