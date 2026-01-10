@@ -5,15 +5,15 @@ export const blogPosts: BlogPost[] = [
         id: '1',
         slug: 'best-corporate-gifts-bangalore-hyderabad',
         title: 'Best Corporate Gifts in Bangalore & Hyderabad: A Guide to Premium Gifting',
-        excerpt: 'Discover why Purnaa Store is the top choice for corporate gifting in Bangalore and Hyderabad. From custom hampers to artistic masterpieces, elevate your business relationships.',
+        excerpt: 'Discover why Ashapura Art Studio (purnaa.store) is a top choice for corporate gifting in Bangalore and Hyderabad. From custom hampers to artistic masterpieces, elevate your business relationships.',
         author: 'Pallavi Jain',
         date: '2025-01-03',
         image: '/logoweb.webp', // Placeholder, ideally use a specific blog image
         tags: ['Corporate Gifting', 'Bangalore', 'Hyderabad', 'Business'],
-        keywords: 'corporate gifts bangalore, corporate gifts hyderabad, premium gifts india, business gifting solutions, purnaa store corporate',
+        keywords: 'corporate gifts bangalore, corporate gifts hyderabad, premium gifts india, business gifting solutions, ashapura art studio, purnaa.store',
         content: `
       <h2>Why Corporate Gifting Matters in Bangalore and Hyderabad</h2>
-      <p>In the bustling tech hubs of <strong>Bangalore</strong> and <strong>Hyderabad</strong>, corporate relationships are the backbone of success. What better way to strengthen these bonds than with exquisite, thoughtful gifts? <strong>Purnaa Store</strong> stands out as the premier provider of high-end corporate gifts that leave a lasting impression.</p>
+      <p>In the bustling tech hubs of <strong>Bangalore</strong> and <strong>Hyderabad</strong>, corporate relationships are the backbone of success. What better way to strengthen these bonds than with exquisite, thoughtful gifts? <strong>Ashapura Art Studio</strong> (purnaa.store) stands out as a premier provider of high-end corporate gifts that leave a lasting impression.</p>
 
       <h3>Unique & Customizable Options</h3>
       <p>Unlike generic bulk items, we offer <em>handcrafted, artistic pieces</em> that reflect sophistication. Our custom bundles can be tailored to your brand's identity, ensuring that your clients in HITEC City or Whitefield remember you.</p>
@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Seamless Delivery:</strong> Efficient networking across Bangalore and Hyderabad ensures timely delivery for Diwali, New Year, or Annual Summits.</li>
       </ul>
 
-      <p>Choose Purnaa Store for the <strong>best corporate gifts in Bangalore and Hyderabad</strong>. <a href="/contact">Contact us</a> today for inquiries and bulk commissions.</p>
+      <p>Choose Ashapura Art Studio for the <strong>best corporate gifts in Bangalore and Hyderabad</strong>. <a href="/contact">Contact us</a> today for inquiries and bulk commissions.</p>
     `
     },
     {

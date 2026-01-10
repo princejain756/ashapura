@@ -304,9 +304,9 @@ export const FAQ = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-art-cream via-art-cream to-art-cream/50 pt-32 pb-20">
             <SEO
-                title="FAQ — Purnaa Store | Corporate Gifting, Custom Art & Tanjore Paintings"
-                description="Find answers about custom art commissions, Tanjore paintings with 24k gold, corporate gifting in Bangalore & Hyderabad, shipping, pricing, and more."
-                keywords="purnaa store faq, corporate gifts bangalore, corporate gifts hyderabad, tanjore paintings, custom art commission india, spiritual art, gold leaf artwork, hyderabad art studio"
+                title="FAQ — Ashapura Art Studio | Corporate Gifting, Custom Art & Tanjore Paintings"
+                description="Find answers about custom art commissions, Tanjore paintings with 24k gold, corporate gifting in Bangalore & Hyderabad, shipping, pricing, and more (purnaa.store)."
+                keywords="ashapura art studio faq, corporate gifts bangalore, corporate gifts hyderabad, tanjore paintings, custom art commission india, spiritual art, gold leaf artwork, hyderabad art studio, purnaa.store"
                 image="/logoweb.webp"
                 type="website"
                 jsonLd={[faqSchemaNode, localBusinessSchemaNode, breadcrumbSchemaNode]}

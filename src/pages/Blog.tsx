@@ -32,7 +32,7 @@ export const Blog = () => {
             <SEO
                 title="Blog - Art, Architecture & Corporate Gifting Insights"
                 description="Read our latest insights on corporate gifting in Bangalore & Hyderabad, award-winning architectural art, and spiritual healing through creativity."
-                keywords="art blog, corporate gifting blog, architecture blog, purnaa store blog"
+                keywords="art blog, corporate gifting blog, architecture blog, ashapura art studio blog, purnaa.store"
                 jsonLd={[breadcrumbSchemaNode]}
             />
             <Section>
