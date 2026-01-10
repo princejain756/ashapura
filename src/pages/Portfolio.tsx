@@ -4,6 +4,7 @@ import { ZoomIn } from 'lucide-react';
 import { artworks, artworkCategories, type Artwork } from '../data/artworks';
 import { ProductModal } from '../components/ui/ProductModal';
 import { useChat } from '../context/ChatContext';
+import { SEO } from '../components/SEO';
 
 export const Portfolio: React.FC = () => {
     const [filter, setFilter] = useState('All');
@@ -25,6 +26,13 @@ export const Portfolio: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-art-cream/30 pt-32 pb-20">
+            <SEO
+                title="Portfolio — Original Art, Murals & Corporate Gifting"
+                description="Explore Purnaa Store’s curated portfolio of spiritual, contemporary, and abstract artworks. Browse originals, commissions, and premium corporate gifting collections."
+                keywords="art portfolio, original paintings, murals, corporate gifting, spiritual art, abstract art, Hyderabad artist, purnaa store"
+                image="/logoweb.webp"
+                type="website"
+            />
             {/* Header */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12 text-center">
                 <motion.div

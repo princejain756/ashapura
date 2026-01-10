@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Section } from '../components/ui/Section';
 import { Button } from '../components/ui/Button';
 import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook, Send } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -65,6 +66,13 @@ ${formData.name}`;
 
     return (
         <div className="pt-20 bg-art-cream min-h-screen">
+            <SEO
+                title="Contact — Purnaa Store"
+                description="Contact Purnaa Store for premium corporate gifting, custom bundles, commissions, and artwork inquiries. Reach us on WhatsApp, email, or visit in Hyderabad."
+                keywords="contact purnaa store, corporate gifting, custom bundles, art commissions, hyderabad, whatsapp, email"
+                image="/logoweb.webp"
+                type="website"
+            />
             <Section>
                 <div className="text-center mb-16">
                     <motion.h1

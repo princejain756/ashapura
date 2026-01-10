@@ -9,6 +9,7 @@ import { ProductModal } from '../components/ui/ProductModal';
 import { useChat } from '../context/ChatContext';
 import { PhoneMockup } from '../components/ui/PhoneMockup';
 import { Instagram } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const Home: React.FC = () => {
     const { selectedProduct, setSelectedProduct } = useChat();
@@ -35,6 +36,7 @@ export const Home: React.FC = () => {
 
     return (
         <div>
+            <SEO />
             {/* Hero Section - Premium Immersive Design */}
             <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-art-cream via-art-cream to-art-gold/10">
                 {/* Animated Background Elements */}
@@ -253,7 +255,7 @@ export const Home: React.FC = () => {
                                         initial={{ opacity: 0, scale: 0 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: 1.2, duration: 0.5, type: "spring" }}
-                                        className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 bg-art-green text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg text-xs sm:text-sm font-medium"
+                                        className="absolute top-6 right-2 sm:top-8 sm:right-4 bg-art-green text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg text-xs sm:text-sm font-medium z-10"
                                     >
                                         🏆 Award Winner
                                     </motion.div>

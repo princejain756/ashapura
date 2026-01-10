@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Section } from '../components/ui/Section';
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin, Award, Building2 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const About: React.FC = () => {
     const location = useLocation();
@@ -20,6 +21,13 @@ export const About: React.FC = () => {
 
     return (
         <div className="pt-20 bg-art-cream min-h-screen">
+            <SEO
+                title="About — Purnaa Store"
+                description="Learn about Purnaa Store and the artist behind the collections. Discover our story, values, awards, and how we create premium art and corporate gifting experiences."
+                keywords="about purnaa store, pallavi jain, hyderabad artist, corporate gifting, spiritual art, awards, ashapura studio"
+                image="/logoweb.webp"
+                type="website"
+            />
             {/* Hero Section - About Me */}
             <Section>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
