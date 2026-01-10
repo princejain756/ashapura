@@ -67,9 +67,9 @@ ${formData.name}`;
     return (
         <div className="pt-20 bg-art-cream min-h-screen">
             <SEO
-                title="Contact — Purnaa Store"
-                description="Contact Purnaa Store for premium corporate gifting, custom bundles, commissions, and artwork inquiries. Reach us on WhatsApp, email, or visit in Hyderabad."
-                keywords="contact purnaa store, corporate gifting, custom bundles, art commissions, hyderabad, whatsapp, email"
+                title="Contact — Ashapura Art Studio"
+                description="Contact Ashapura Art Studio (purnaa.store) for premium corporate gifting, custom bundles, commissions, and artwork inquiries. Reach us on WhatsApp, email, or visit in Hyderabad."
+                keywords="contact ashapura art studio, corporate gifting, custom bundles, art commissions, hyderabad, whatsapp, email, purnaa.store"
                 image="/logoweb.webp"
                 type="website"
             />
@@ -160,7 +160,7 @@ ${formData.name}`;
                                     className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"
                                 >
                                     <Facebook size={18} className="text-art-green" />
-                                    <span className="text-xs sm:text-sm">Purnaa Store</span>
+                                    <span className="text-xs sm:text-sm">Ashapura Art Studio</span>
                                 </a>
                             </div>
                         </div>
@@ -274,7 +274,7 @@ ${formData.name}`;
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Purnaa Store Location - Himayat Nagar, Hyderabad"
+                            title="Ashapura Art Studio Location - Himayat Nagar, Hyderabad"
                             className="w-full"
                         />
                     </div>

@@ -14,9 +14,9 @@ interface SEOProps {
 }
 
 export const SEO = ({
-    title = "Purnaa Store — Exquisite Corporate Gifts & Artistic Collections",
-    description = "Discover Purnaa Store's exclusive collection of corporate gifts, artistic creations, and custom bundles. Elevate your gifting experience with our premium, handcrafted selections.",
-    keywords = "corporate gifts, artistic gifts, custom bundles, purnaa store, premium gifts, handcrafted art, business gifting",
+    title = "Ashapura Art Studio — Spiritual & Contemporary Art by Pallavi Jain",
+    description = "Ashapura Art Studio (purnaa.store) — original spiritual & contemporary artworks by Pallavi Jain, plus premium corporate gifting and custom commissions.",
+    keywords = "ashapura art studio, pallavi jain, spiritual art, contemporary art, tanjore paintings, corporate gifting, custom commissions, hyderabad artist, purnaa.store",
     image = "/logoweb.webp",
     url,
     type = "website",
@@ -25,7 +25,7 @@ export const SEO = ({
 }: SEOProps) => {
     const location = useLocation();
 
-    const siteName = "Purnaa Store";
+    const siteName = (import.meta.env.VITE_SITE_NAME as string | undefined) ?? "Ashapura Art Studio";
     const siteUrl = (import.meta.env.VITE_SITE_URL as string | undefined) ?? "https://purnaa.store";
 
     const canonicalUrl = useMemo(() => {
@@ -62,6 +62,7 @@ export const SEO = ({
                 "@type": "Organization",
                 "@id": organizationId,
                 "name": siteName,
+                "alternateName": ["Ashapura Studio", "purnaa.store"],
                 "url": baseUrl,
                 "logo": {
                     "@type": "ImageObject",

@@ -27,9 +27,9 @@ export const Portfolio: React.FC = () => {
     return (
         <div className="min-h-screen bg-art-cream/30 pt-32 pb-20">
             <SEO
-                title="Portfolio — Original Art, Murals & Corporate Gifting"
-                description="Explore Purnaa Store’s curated portfolio of spiritual, contemporary, and abstract artworks. Browse originals, commissions, and premium corporate gifting collections."
-                keywords="art portfolio, original paintings, murals, corporate gifting, spiritual art, abstract art, Hyderabad artist, purnaa store"
+                title="Portfolio — Ashapura Art Studio"
+                description="Explore Ashapura Art Studio’s curated portfolio of spiritual, contemporary, and abstract artworks. Browse originals, commissions, murals, and premium corporate gifting collections on purnaa.store."
+                keywords="ashapura art studio portfolio, original paintings, murals, corporate gifting, spiritual art, abstract art, hyderabad artist, purnaa.store"
                 image="/logoweb.webp"
                 type="website"
             />
@@ -45,7 +45,7 @@ export const Portfolio: React.FC = () => {
                         Art Collection
                     </h1>
                     <p className="text-art-charcoal/60 max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed px-4">
-                        Explore Purnaa Store’s curated selection of spiritual, contemporary, and abstract artworks. Each piece is a unique expression of consciousness and creativity.
+                        Explore Ashapura Art Studio’s curated selection of spiritual, contemporary, and abstract artworks. Each piece is a unique expression of consciousness and creativity.
                     </p>
                 </motion.div>
             </div>

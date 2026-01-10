@@ -95,7 +95,7 @@ const faqCategories = [
             },
             {
                 question: "Do you offer international shipping for artworks?",
-                answer: "Yes, Purnaa Store (Ashapura Art Studio) ships globally to USA, UK, UAE, Australia, Canada, Singapore, and more. International shipments include professional crating, insurance, and customs documentation. Shipping costs and timelines vary by destination – contact us for a quote."
+                answer: "Yes, Ashapura Art Studio (purnaa.store) ships globally to USA, UK, UAE, Australia, Canada, Singapore, and more. International shipments include professional crating, insurance, and customs documentation. Shipping costs and timelines vary by destination – contact us for a quote."
             },
             {
                 question: "How do you package artworks for safe delivery?",
@@ -117,7 +117,7 @@ const faqCategories = [
         icon: MapPin,
         faqs: [
             {
-                question: "Where is Purnaa Store / Ashapura Art Studio located?",
+                question: "Where is Ashapura Art Studio located?",
                 answer: "Our studio is located in Himayat Nagar, Hyderabad, Telangana, India. It's easily accessible and we welcome visits by appointment to view our gallery, discuss commissions, or explore corporate gifting options. Contact us at +91 9553339663 to schedule your visit."
             },
             {
@@ -178,7 +178,7 @@ const faqSchemaNode = {
 // LocalBusiness Schema (node-only; context is provided globally)
 const localBusinessSchemaNode = {
     "@type": "LocalBusiness",
-    "name": "Purnaa Store",
+    "name": "Ashapura Art Studio",
     "image": new URL('/pallavi-jain.webp', siteUrl).toString(),
     "url": siteUrl,
     "telephone": "+919553339663",
