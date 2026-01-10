@@ -6,12 +6,58 @@ import { blogPosts } from '../data/blogs';
 import { ArrowLeft, Calendar, User, Tag } from 'lucide-react';
 
 export const BlogPost = () => {
+    const siteUrl = (import.meta.env.VITE_SITE_URL as string | undefined) ?? 'https://purnaa.store';
+    const baseUrl = siteUrl.replace(/\/+$/, '');
     const { slug } = useParams();
     const post = blogPosts.find(p => p.slug === slug);
 
     if (!post) {
         return <Navigate to="/blog" replace />;
     }
+
+    const blogPostingSchemaNode = {
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "image": new URL(post.image, siteUrl).toString(),
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": {
+            "@type": "Person",
+            "name": post.author
+        },
+        "publisher": {
+            "@id": `${baseUrl}/#organization`
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": new URL(`/blog/${post.slug}`, siteUrl).toString()
+        }
+    };
+
+    const breadcrumbSchemaNode = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": baseUrl
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": new URL('/blog', siteUrl).toString()
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": new URL(`/blog/${post.slug}`, siteUrl).toString()
+            }
+        ]
+    };
 
     return (
         <div className="pt-20 bg-art-cream min-h-screen">
@@ -21,6 +67,7 @@ export const BlogPost = () => {
                 keywords={post.keywords}
                 image={post.image}
                 type="article"
+                jsonLd={[blogPostingSchemaNode, breadcrumbSchemaNode]}
             />
             <Section>
                 <div className="max-w-4xl mx-auto">

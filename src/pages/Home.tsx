@@ -119,7 +119,7 @@ export const Home: React.FC = () => {
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-art-gold opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-art-gold"></span>
                                 </span>
-                                <span className="text-art-charcoal/80 text-xs sm:text-sm font-medium tracking-wide">Spiritual Art Studio • Est. 2019</span>
+                                <span className="text-art-charcoal/80 text-xs sm:text-sm font-medium tracking-wide">Purnaa Store • Spiritual Art & Corporate Gifting</span>
                             </motion.div>
 
                             {/* Main Heading */}
@@ -128,23 +128,22 @@ export const Home: React.FC = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3, duration: 0.8 }}
                             >
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-art-green mb-1 sm:mb-2 leading-[1.1]">
-                                    Where Art
-                                </h1>
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-art-green mb-1 sm:mb-2 leading-[1.1]">
-                                    Meets
-                                </h1>
                                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-[1.1] mb-4 sm:mb-6">
-                                    <span className="relative inline-block">
-                                        <span className="bg-gradient-to-r from-art-gold via-yellow-600 to-art-gold bg-clip-text text-transparent italic">
-                                            Consciousness
+                                    <span className="sr-only">Purnaa Store — </span>
+                                    <span className="block text-art-green mb-1 sm:mb-2">Where Art</span>
+                                    <span className="block text-art-green mb-1 sm:mb-2">Meets</span>
+                                    <span className="block">
+                                        <span className="relative inline-block">
+                                            <span className="bg-gradient-to-r from-art-gold via-yellow-600 to-art-gold bg-clip-text text-transparent italic">
+                                                Consciousness
+                                            </span>
+                                            <motion.span
+                                                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-art-gold to-art-gold/30 rounded-full"
+                                                initial={{ scaleX: 0 }}
+                                                animate={{ scaleX: 1 }}
+                                                transition={{ delay: 0.8, duration: 0.6 }}
+                                            />
                                         </span>
-                                        <motion.span
-                                            className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-art-gold to-art-gold/30 rounded-full"
-                                            initial={{ scaleX: 0 }}
-                                            animate={{ scaleX: 1 }}
-                                            transition={{ delay: 0.8, duration: 0.6 }}
-                                        />
                                     </span>
                                 </h1>
                             </motion.div>
@@ -156,7 +155,7 @@ export const Home: React.FC = () => {
                                 transition={{ delay: 0.5, duration: 0.8 }}
                                 className="text-base sm:text-lg md:text-xl text-art-charcoal/70 max-w-lg mb-6 sm:mb-10 leading-relaxed font-light"
                             >
-                                Transforming spaces into sanctuaries of color, consciousness, and calm. Discover soul-guided spiritual art by <span className="text-art-green font-medium">Pallavi Jain</span>.
+                                Purnaa Store transforms spaces into sanctuaries of color, consciousness, and calm — featuring soul-guided spiritual art by <span className="text-art-green font-medium">Pallavi Jain</span>.
                             </motion.p>
 
                             {/* CTA Buttons */}
@@ -473,10 +472,10 @@ export const Home: React.FC = () => {
                         Colors are the language of the soul — they speak when words fall short.
                     </blockquote>
                     <div className="flex items-center justify-center gap-4">
-                        <img src="/pallavi-jain.webp" alt="Pallavi Jain" className="w-14 h-14 rounded-full object-cover border-2 border-art-gold" />
+                            <img src="/pallavi-jain.webp" alt="Pallavi Jain" className="w-14 h-14 rounded-full object-cover border-2 border-art-gold" />
                         <div className="text-left">
                             <p className="font-serif text-art-green font-medium">Pallavi Jain</p>
-                            <p className="text-sm text-art-charcoal/60">Founder, AshaPura Art Studio</p>
+                            <p className="text-sm text-art-charcoal/60">Founder, Purnaa Store (Ashapura Studio)</p>
                         </div>
                     </div>
                 </motion.div>

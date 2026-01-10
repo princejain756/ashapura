@@ -160,7 +160,7 @@ ${formData.name}`;
                                     className="flex items-center gap-2 bg-art-cream px-3 sm:px-4 py-2 rounded-lg hover:bg-art-gold/20 transition-colors tap-scale"
                                 >
                                     <Facebook size={18} className="text-art-green" />
-                                    <span className="text-xs sm:text-sm">Ashapura Art Studio</span>
+                                    <span className="text-xs sm:text-sm">Purnaa Store</span>
                                 </a>
                             </div>
                         </div>
@@ -274,7 +274,7 @@ ${formData.name}`;
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="AshaPura Art Studio Location - Himayat Nagar, Hyderabad"
+                            title="Purnaa Store Location - Himayat Nagar, Hyderabad"
                             className="w-full"
                         />
                     </div>

@@ -10,9 +10,9 @@ export const Footer: React.FC = () => {
 
                     {/* Brand */}
                     <div className="flex flex-col items-center sm:items-start space-y-3 sm:space-y-4 sm:col-span-2 md:col-span-1">
-                        <img src="/logoweb.webp" alt="Ashapura Art Studios" className="h-16 w-auto brightness-0 invert opacity-80" />
+                        <img src="/logoweb.webp" alt="Purnaa Store" className="h-16 w-auto brightness-0 invert opacity-80" />
                         <p className="text-art-cream/80 text-sm max-w-xs leading-relaxed">
-                            Spiritual & Contemporary Art by Pallavi Jain. Transforming spaces into sanctuaries of color, consciousness, and calm.
+                            Purnaa Store curates spiritual & contemporary art by Pallavi Jain, plus premium corporate gifting collections. Transforming spaces into sanctuaries of color, consciousness, and calm.
                         </p>
                         <p className="text-art-gold text-xs italic">"Making Art in Common Man's Reach"</p>
                     </div>
@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <div className="border-t border-art-cream/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
-                    <p className="text-sm text-art-cream/60">© 2025 AshaPura Art Studio. All rights reserved.</p>
+                    <p className="text-sm text-art-cream/60">© 2025 Purnaa Store. All rights reserved.</p>
                 </div>
             </div>
         </footer>

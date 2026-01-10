@@ -5,12 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Import blog posts (we need to compile this or read the source file)
-// Since this script runs in Node, we'll quickly regex the blogs.ts or define static for now
-// For a production CLI, we'd use ts-node or similar.
-// Here we will use a hardcoded approach for simplicity and robustness in this environment.
-
-const BASE_URL = 'https://purnaa.store';
+const BASE_URL = (process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://purnaa.store').replace(/\/+$/, '');
 
 const routes = [
     '/',
@@ -21,16 +16,21 @@ const routes = [
     '/faq'
 ];
 
-const blogSlugs = [
-    'best-corporate-gifts-bangalore-hyderabad',
-    'award-winning-architecture-art-hyderabad',
-    'meaning-of-spiritual-art'
-];
+const getBlogSlugs = () => {
+    try {
+        const blogsPath = path.resolve(__dirname, '../src/data/blogs.ts');
+        const source = fs.readFileSync(blogsPath, 'utf8');
+        const matches = [...source.matchAll(/slug:\s*'([^']+)'/g)];
+        return [...new Set(matches.map(m => m[1]))];
+    } catch {
+        return [];
+    }
+};
 
 const generateSitemap = () => {
     const allRoutes = [
         ...routes,
-        ...blogSlugs.map(slug => `/blog/${slug}`)
+        ...getBlogSlugs().map(slug => `/blog/${slug}`)
     ];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -45,7 +45,10 @@ const generateSitemap = () => {
   `).join('')}
 </urlset>`;
 
-    const outputPath = path.resolve(__dirname, '../public/sitemap.xml');
+    const distDir = path.resolve(__dirname, '../dist');
+    const outputPath = fs.existsSync(distDir)
+        ? path.resolve(distDir, 'sitemap.xml')
+        : path.resolve(__dirname, '../public/sitemap.xml');
     fs.writeFileSync(outputPath, sitemap);
     console.log(`Sitemap generated at ${outputPath}`);
 };

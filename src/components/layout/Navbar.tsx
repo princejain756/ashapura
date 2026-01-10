@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
                             <div className="relative overflow-hidden rounded-xl p-1">
                                 <motion.img
                                     src="/logoweb.webp"
-                                    alt="Asha Pura Studio"
+                                    alt="Purnaa Store"
                                     className="w-10 h-10 md:w-16 md:h-16 object-contain relative z-10 transition-all duration-700"
                                     whileHover={{ scale: 1.1, rotate: 5 }}
                                     transition={{ type: "spring", stiffness: 400 }}
@@ -115,6 +115,7 @@ export const Navbar: React.FC = () => {
                                     }}
                                 />
                             </div>
+                            <span className="sr-only">Purnaa Store</span>
                         </NavLink>
 
                         {/* Desktop Menu */}

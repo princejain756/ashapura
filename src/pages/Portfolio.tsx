@@ -45,7 +45,7 @@ export const Portfolio: React.FC = () => {
                         Art Collection
                     </h1>
                     <p className="text-art-charcoal/60 max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed px-4">
-                        Explore a curated selection of spiritual, contemporary, and abstract artworks. Each piece is a unique expression of consciousness and creativity.
+                        Explore Purnaa Store’s curated selection of spiritual, contemporary, and abstract artworks. Each piece is a unique expression of consciousness and creativity.
                     </p>
                 </motion.div>
             </div>

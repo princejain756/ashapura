@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { Plus, Minus, Palette, Building2, Truck, MapPin, Sparkles, HelpCircle } from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const siteUrl = (import.meta.env.VITE_SITE_URL as string | undefined) ?? 'https://purnaa.store';
 
 // Comprehensive FAQ data organized by category for maximum SEO
 const faqCategories = [
@@ -93,7 +95,7 @@ const faqCategories = [
             },
             {
                 question: "Do you offer international shipping for artworks?",
-                answer: "Yes, Ashapura Art Studio ships globally to USA, UK, UAE, Australia, Canada, Singapore, and more. International shipments include professional crating, insurance, and customs documentation. Shipping costs and timelines vary by destination – contact us for a quote."
+                answer: "Yes, Purnaa Store (Ashapura Art Studio) ships globally to USA, UK, UAE, Australia, Canada, Singapore, and more. International shipments include professional crating, insurance, and customs documentation. Shipping costs and timelines vary by destination – contact us for a quote."
             },
             {
                 question: "How do you package artworks for safe delivery?",
@@ -115,7 +117,7 @@ const faqCategories = [
         icon: MapPin,
         faqs: [
             {
-                question: "Where is Ashapura Art Studio located?",
+                question: "Where is Purnaa Store / Ashapura Art Studio located?",
                 answer: "Our studio is located in Himayat Nagar, Hyderabad, Telangana, India. It's easily accessible and we welcome visits by appointment to view our gallery, discuss commissions, or explore corporate gifting options. Contact us at +91 9553339663 to schedule your visit."
             },
             {
@@ -160,9 +162,8 @@ const faqCategories = [
 // Flatten all FAQs for schema markup
 const allFaqs = faqCategories.flatMap(cat => cat.faqs);
 
-// FAQPage Schema for Google Rich Results
-const faqSchema = {
-    "@context": "https://schema.org",
+// FAQPage Schema for Google Rich Results (node-only; context is provided globally)
+const faqSchemaNode = {
     "@type": "FAQPage",
     "mainEntity": allFaqs.map(faq => ({
         "@type": "Question",
@@ -174,13 +175,12 @@ const faqSchema = {
     }))
 };
 
-// LocalBusiness Schema
-const localBusinessSchema = {
-    "@context": "https://schema.org",
+// LocalBusiness Schema (node-only; context is provided globally)
+const localBusinessSchemaNode = {
     "@type": "LocalBusiness",
-    "name": "Ashapura Art Studio",
-    "image": "https://ashapura.art/pallavi-jain.webp",
-    "url": "https://ashapura.art",
+    "name": "Purnaa Store",
+    "image": new URL('/pallavi-jain.webp', siteUrl).toString(),
+    "url": siteUrl,
     "telephone": "+919553339663",
     "address": {
         "@type": "PostalAddress",
@@ -196,33 +196,37 @@ const localBusinessSchema = {
         "longitude": 78.4772
     },
     "priceRange": "₹₹₹",
-    "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "10:00",
-        "closes": "19:00"
-    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "19:00"
+        }
+    ],
     "sameAs": [
-        "https://www.instagram.com/ashapura_art_studio"
+        "https://instagram.com/ashapura_art_studio",
+        "https://www.linkedin.com/in/pallavi-jain-303b3923/",
+        "https://www.facebook.com/pallaviartlove/",
+        "https://pin.it/5Exhvu4he"
     ]
 };
 
-// BreadcrumbList Schema
-const breadcrumbSchema = {
-    "@context": "https://schema.org",
+// BreadcrumbList Schema (node-only; context is provided globally)
+const breadcrumbSchemaNode = {
     "@type": "BreadcrumbList",
     "itemListElement": [
         {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ashapura.art"
+            "item": siteUrl
         },
         {
             "@type": "ListItem",
             "position": 2,
             "name": "FAQ",
-            "item": "https://ashapura.art/faq"
+            "item": new URL('/faq', siteUrl).toString()
         }
     ]
 };
@@ -298,50 +302,21 @@ const FAQCategory = ({ category, categoryIndex }: { category: typeof faqCategori
 
 export const FAQ = () => {
     return (
-        <>
-            <Helmet>
-                {/* Primary Meta Tags */}
-                <title>FAQ - Ashapura Art Studio | Custom Art, Tanjore Paintings & Corporate Gifts Hyderabad</title>
-                <meta name="description" content="Find answers about custom art commissions, Tanjore paintings with 24k gold, corporate gifting in Bangalore & Hyderabad, spiritual art, pricing, shipping & more. Visit our Himayat Nagar studio." />
-                <meta name="keywords" content="art studio hyderabad, tanjore paintings, custom art commission india, corporate gifts bangalore, spiritual art, lord ganesha painting, gold leaf artwork, wall art hyderabad, pallavi jain artist, ashapura art, hindu deity paintings, abstract art india" />
+        <div className="min-h-screen bg-gradient-to-b from-art-cream via-art-cream to-art-cream/50 pt-32 pb-20">
+            <SEO
+                title="FAQ — Purnaa Store | Corporate Gifting, Custom Art & Tanjore Paintings"
+                description="Find answers about custom art commissions, Tanjore paintings with 24k gold, corporate gifting in Bangalore & Hyderabad, shipping, pricing, and more."
+                keywords="purnaa store faq, corporate gifts bangalore, corporate gifts hyderabad, tanjore paintings, custom art commission india, spiritual art, gold leaf artwork, hyderabad art studio"
+                image="/logoweb.webp"
+                type="website"
+                jsonLd={[faqSchemaNode, localBusinessSchemaNode, breadcrumbSchemaNode]}
+            />
 
-                {/* Open Graph */}
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://ashapura.art/faq" />
-                <meta property="og:title" content="FAQ - Ashapura Art Studio | Custom Art & Corporate Gifts" />
-                <meta property="og:description" content="Get answers about custom paintings, Tanjore art, corporate gifting, pricing & delivery. Hyderabad's premier spiritual art studio by Pallavi Jain." />
-                <meta property="og:image" content="https://ashapura.art/logoweb.webp" />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="FAQ - Ashapura Art Studio" />
-                <meta name="twitter:description" content="Answers about custom art, Tanjore paintings & corporate gifts in Hyderabad & Bangalore." />
-
-                {/* Canonical URL */}
-                <link rel="canonical" href="https://ashapura.art/faq" />
-
-                {/* FAQPage Schema - Critical for Google Rich Results */}
-                <script type="application/ld+json">
-                    {JSON.stringify(faqSchema)}
-                </script>
-
-                {/* LocalBusiness Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify(localBusinessSchema)}
-                </script>
-
-                {/* Breadcrumb Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify(breadcrumbSchema)}
-                </script>
-            </Helmet>
-
-            <div className="min-h-screen bg-gradient-to-b from-art-cream via-art-cream to-art-cream/50 pt-32 pb-20">
-                {/* Decorative Background */}
-                <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-art-gold/5 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-art-green/5 rounded-full blur-3xl" />
-                </div>
+            {/* Decorative Background */}
+            <div className="fixed inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-art-gold/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-art-green/5 rounded-full blur-3xl" />
+            </div>
 
                 <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
                     {/* Header */}
@@ -414,7 +389,6 @@ export const FAQ = () => {
                         </div>
                     </motion.div>
                 </div>
-            </div>
-        </>
+        </div>
     );
 };

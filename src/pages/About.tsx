@@ -61,7 +61,7 @@ export const About: React.FC = () => {
                                 Her intuitive, soul-guided process transforms spaces into sanctuaries — from private homes to luxury hotels — infusing them with color, consciousness, and calm. She believes that <em className="text-art-gold">art should be accessible to everyone</em>.
                             </p>
                             <p>
-                                Through <strong className="text-art-green font-medium">Ashapura Studio</strong> — her 7-year-old GST registered firm — Pallavi offers original paintings, murals, hand-painted décor, and custom artworks that touch hearts and elevate everyday spaces.
+                                Through <strong className="text-art-green font-medium">Ashapura Studio</strong> (GST registered) and <strong className="text-art-green font-medium">Purnaa Store</strong> — the official online storefront — Pallavi offers original paintings, murals, hand-painted décor, and custom artworks that touch hearts and elevate everyday spaces.
                             </p>
                         </div>
 
@@ -132,14 +132,14 @@ export const About: React.FC = () => {
                 >
                     <div className="text-center mb-12">
                         <h2 className="text-art-gold font-serif text-base sm:text-lg tracking-widest mb-2">🏛️ COMPANY PROFILE</h2>
-                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-art-green">Ashapura Studio</h3>
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-art-green">Purnaa Store (Ashapura Studio)</h3>
                         <p className="text-art-charcoal/60 mt-4 italic">"Making Art in Common Man's Reach"</p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                         <div className="space-y-5 sm:space-y-6 text-art-charcoal/80 text-base sm:text-lg leading-relaxed font-light">
                             <p>
-                                Established in <strong className="text-art-green font-medium">April 2019</strong>, AshaPura Art Studio is a registered and trusted name in the Indian art scene, known for transforming walls and spaces with powerful creativity and elegant precision.
+                                Established in <strong className="text-art-green font-medium">April 2019</strong>, Ashapura Studio powers Purnaa Store — a registered and trusted name in the Indian art scene, known for transforming walls and spaces with powerful creativity and elegant precision.
                             </p>
                             <p>
                                 Founded by Pallavi, a passionate artist with over six years of professional experience, the studio has sold more than <strong className="text-art-green font-medium">800 original artworks</strong> to clients across India and globally.
@@ -286,7 +286,7 @@ export const About: React.FC = () => {
                             className="flex items-center gap-2 bg-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:bg-art-gold/10 tap-scale"
                         >
                             <Facebook className="text-art-green" size={20} />
-                            <span className="text-art-charcoal text-sm sm:text-base">Ashapura Art Studio</span>
+                            <span className="text-art-charcoal text-sm sm:text-base">Purnaa Store</span>
                         </a>
                     </div>
 
@@ -313,7 +313,7 @@ export const About: React.FC = () => {
                     <p className="mt-4 text-art-charcoal/80">
                         Best regards,<br />
                         <strong className="text-art-green">Pallavi Jain</strong><br />
-                        AshaPura Art Studio
+                        Purnaa Store (Ashapura Studio)
                     </p>
                 </motion.div>
             </Section>

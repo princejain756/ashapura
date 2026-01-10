@@ -7,12 +7,33 @@ import { blogPosts } from '../data/blogs';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
 export const Blog = () => {
+    const siteUrl = (import.meta.env.VITE_SITE_URL as string | undefined) ?? 'https://purnaa.store';
+    const baseUrl = siteUrl.replace(/\/+$/, '');
+    const breadcrumbSchemaNode = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": baseUrl
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": new URL('/blog', siteUrl).toString()
+            }
+        ]
+    };
+
     return (
         <div className="pt-20 bg-art-cream min-h-screen">
             <SEO
                 title="Blog - Art, Architecture & Corporate Gifting Insights"
                 description="Read our latest insights on corporate gifting in Bangalore & Hyderabad, award-winning architectural art, and spiritual healing through creativity."
                 keywords="art blog, corporate gifting blog, architecture blog, purnaa store blog"
+                jsonLd={[breadcrumbSchemaNode]}
             />
             <Section>
                 <div className="max-w-6xl mx-auto">
