@@ -80,6 +80,17 @@ export const Footer: React.FC = () => {
 
                 <div className="border-t border-art-cream/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
                     <p className="text-sm text-art-cream/60">© 2025 Ashapura Art Studio. All rights reserved.</p>
+                    <p className="text-xs text-art-cream/40 mt-2">
+                        Made by{' '}
+                        <a 
+                            href="https://maninfini.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="hover:text-art-gold transition-colors underline-offset-4"
+                        >
+                            Maninfini Automation
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>

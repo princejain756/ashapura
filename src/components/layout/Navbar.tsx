@@ -74,48 +74,13 @@ export const Navbar: React.FC = () => {
                     `}>
                         {/* Logo Area */}
                         <NavLink to="/" className="flex items-center gap-3 group">
-                            <div className="relative overflow-hidden rounded-xl p-1">
-                                <motion.img
-                                    src="/logoweb.webp"
-                                    alt="Ashapura Art Studio"
-                                    className="w-10 h-10 md:w-16 md:h-16 object-contain relative z-10 transition-all duration-700"
-                                    whileHover={{ scale: 1.1, rotate: 5 }}
-                                    transition={{ type: "spring", stiffness: 400 }}
-                                    style={{ filter: "drop-shadow(0 0 8px rgba(217, 164, 65, 0.2))" }}
-                                />
-                                {/* Top-tier Shine Effect for the Golden Logo */}
-                                <motion.div
-                                    className="absolute inset-0 z-20 pointer-events-none mix-blend-overlay"
-                                    initial={{ x: '-150%', skewX: -30 }}
-                                    animate={{ 
-                                        x: ['-150%', '150%'],
-                                    }}
-                                    transition={{
-                                        duration: 3.5,
-                                        repeat: Infinity,
-                                        repeatDelay: 4,
-                                        ease: "easeInOut"
-                                    }}
-                                    style={{
-                                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,1), transparent)',
-                                        width: '100%'
-                                    }}
-                                />
-                                {/* Rapid Hover Shine */}
-                                <motion.div
-                                    className="absolute inset-0 z-30 pointer-events-none mix-blend-overlay"
-                                    initial={{ x: '-150%', skewX: -30 }}
-                                    whileHover={{ 
-                                        x: '150%',
-                                        transition: { duration: 0.8, ease: "easeOut" }
-                                    }}
-                                    style={{
-                                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <span className="sr-only">Ashapura Art Studio</span>
+                            <motion.img
+                                src="/logoweb.webp"
+                                alt="Asha Pura Studio"
+                                className="w-10 h-10 object-contain"
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                transition={{ type: "spring", stiffness: 400 }}
+                            />
                         </NavLink>
 
                         {/* Desktop Menu */}
