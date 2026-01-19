@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
 import { FAQ } from './pages/FAQ';
+import { ArtClasses } from './pages/ArtClasses';
 import { ChatProvider } from './context/ChatContext';
 import { Chatbot } from './components/ui/Chatbot';
 
@@ -37,6 +38,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/art-classes" element={<ArtClasses />} />
             </Routes>
           </main>
           <Footer />

@@ -107,6 +107,75 @@ export const Navbar: React.FC = () => {
                                 )}
                             </NavLink>
 
+                            {/* Classes with Dropdown */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setActiveDropdown('classes')}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <NavLink
+                                    to="/art-classes"
+                                    className={({ isActive }) => `
+                                        relative px-5 py-2 rounded-full text-sm uppercase tracking-widest font-medium transition-all duration-300 flex items-center gap-1
+                                        ${isActive ? 'text-white' : 'text-art-green hover:bg-art-green/5'}
+                                    `}
+                                >
+                                    {({ isActive }) => (
+                                        <>
+                                            <span className="relative z-10">Classes</span>
+                                            <ChevronDown size={14} className={`relative z-10 transition-transform ${activeDropdown === 'classes' ? 'rotate-180' : ''}`} />
+                                            {isActive && (
+                                                <motion.div
+                                                    layoutId="activeTab"
+                                                    className="absolute inset-0 bg-art-green rounded-full shadow-md"
+                                                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                                />
+                                            )}
+                                        </>
+                                    )}
+                                </NavLink>
+
+                                <AnimatePresence>
+                                    {activeDropdown === 'classes' && (
+                                        <motion.div
+                                            variants={dropdownVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                            className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[320px]"
+                                        >
+                                            <div className="bg-white rounded-2xl shadow-2xl border border-art-gold/10 overflow-hidden">
+                                                {/* Header */}
+                                                <div className="bg-gradient-to-r from-art-gold to-yellow-600 px-6 py-4">
+                                                    <h3 className="text-white font-serif text-lg">Art Classes</h3>
+                                                    <p className="text-white/80 text-xs mt-1">Nurture creativity in young minds</p>
+                                                </div>
+                                                <div className="p-4 space-y-3">
+                                                    <NavLink
+                                                        to="/art-classes"
+                                                        className="flex items-center gap-4 p-3 rounded-xl hover:bg-art-cream/50 transition-all group"
+                                                    >
+                                                        <div className="w-12 h-12 bg-art-green/10 rounded-full flex items-center justify-center text-art-green">
+                                                            <Palette size={22} />
+                                                        </div>
+                                                        <div className="flex-1">
+                                                            <span className="font-medium text-art-green">Kids Art Classes</span>
+                                                            <p className="text-xs text-art-charcoal/60 mt-0.5">Ages 7-14 • 3 sessions/week</p>
+                                                        </div>
+                                                    </NavLink>
+                                                    <div className="border-t border-art-cream pt-3">
+                                                        <a href="tel:+919553339663" className="flex items-center justify-center gap-2 text-sm text-art-green hover:text-art-gold transition-colors font-medium">
+                                                            <Phone size={14} />
+                                                            <span>Call to Register</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+
                             {/* Portfolio with Dropdown */}
                             <div
                                 className="relative"
@@ -370,6 +439,7 @@ export const Navbar: React.FC = () => {
                         <div className="relative z-10 flex flex-col space-y-8 text-center">
                             {[
                                 { name: 'Home', path: '/' },
+                                { name: 'Classes', path: '/art-classes' },
                                 { name: 'Portfolio', path: '/portfolio' },
                                 { name: 'About', path: '/about' },
                                 { name: 'Contact', path: '/contact' },
