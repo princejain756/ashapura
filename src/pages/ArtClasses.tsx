@@ -125,17 +125,95 @@ export const ArtClasses: React.FC = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
+            {/* Course Structure Section */}
             <Section background="default" id="details">
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <span className="text-art-gold text-sm font-medium tracking-[0.2em] uppercase">Professional Courses</span>
+                    <h2 className="text-4xl md:text-5xl font-serif text-art-green mt-3 mb-4">Course Structure</h2>
+                    <p className="text-art-charcoal/70">Unleash your creativity with our professional courses in art and craft, designed to hone your skills and turn your passion into a career.</p>
+                </div>
+
+                {/* Course Cards Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+                    {[
+                        { num: '01', title: 'Texture Art', duration: '7 Days' },
+                        { num: '02', title: 'Alcohol Ink', duration: '3 Days' },
+                        { num: '03', title: 'Clay Mural', duration: '6 Days' },
+                        { num: '04', title: 'Abstract Painting', duration: '5 Days' },
+                    ].map((course, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                            whileHover={{ y: -5 }}
+                            className="bg-white p-4 md:p-6 rounded-xl border-2 border-art-gold/30 hover:border-art-gold transition-all shadow-sm hover:shadow-lg text-center"
+                        >
+                            <span className="text-xs text-art-gold font-bold">{course.num}</span>
+                            <h4 className="font-serif text-art-green text-base md:text-lg mt-2 mb-3">{course.title}</h4>
+                            <div className="inline-block bg-art-gold text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                                {course.duration}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Full Course Info */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-art-cream/50 rounded-2xl p-6 md:p-8 border border-art-cream"
+                >
+                    <p className="text-art-charcoal/80 mb-6 text-center md:text-left">
+                        Our professional courses in Art and Craft are designed to provide comprehensive training and equip you with the skills needed to excel in the industry.
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {/* Left - Full Course Details */}
+                        <div className="bg-white p-6 rounded-xl border border-art-gold/20">
+                            <div className="flex items-center gap-2 mb-4">
+                                <Star className="text-art-gold" size={20} />
+                                <h3 className="font-serif text-xl text-art-green font-medium">Full Course Available</h3>
+                            </div>
+                            <ul className="space-y-3 text-art-charcoal/80">
+                                <li className="flex items-center gap-3">
+                                    <Calendar size={16} className="text-art-gold" />
+                                    <span><strong>Duration:</strong> 20 Days</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <Brush size={16} className="text-art-gold" />
+                                    <span><strong>Hands-on Projects</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Right - Certification */}
+                        <div className="bg-art-green/5 p-6 rounded-xl border border-art-green/20">
+                            <div className="flex items-center gap-2 mb-4">
+                                <Sparkles className="text-art-gold" size={20} />
+                                <h3 className="font-serif text-xl text-art-green font-medium">Certification</h3>
+                            </div>
+                            <p className="text-art-charcoal/80">
+                                Receive a <strong>recognized certificate</strong> upon completion of the Full Course.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
+            </Section>
+
+            {/* Features Section */}
+            <Section background="alt">
                 <div className="grid md:grid-cols-3 gap-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="bg-art-cream/30 p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
+                        className="bg-white p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
                     >
-                        <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
+                        <div className="w-14 h-14 bg-art-cream rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
                             <Brush size={28} />
                         </div>
                         <h3 className="text-2xl font-serif text-art-green mb-3">All Materials Provided</h3>
@@ -149,9 +227,9 @@ export const ArtClasses: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-art-cream/30 p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
+                        className="bg-white p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
                     >
-                        <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
+                        <div className="w-14 h-14 bg-art-cream rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
                             <Star size={28} />
                         </div>
                         <h3 className="text-2xl font-serif text-art-green mb-3">Small Batch Size</h3>
@@ -165,9 +243,9 @@ export const ArtClasses: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-art-cream/30 p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
+                        className="bg-white p-8 rounded-2xl border border-art-cream hover:shadow-lg transition-all"
                     >
-                        <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
+                        <div className="w-14 h-14 bg-art-cream rounded-full flex items-center justify-center text-art-gold shadow-sm mb-6">
                             <Palette size={28} />
                         </div>
                         <h3 className="text-2xl font-serif text-art-green mb-3">Creative Freedom</h3>
