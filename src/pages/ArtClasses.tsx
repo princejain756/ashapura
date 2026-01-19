@@ -107,8 +107,8 @@ export const ArtClasses: React.FC = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="relative"
                     >
-                        <div className="relative z-10">
-                            <img src="/createplaylearn.webp" alt="Create. Play. Learn." className="w-full max-w-md rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500" />
+                        <div className="relative z-10 mx-auto">
+                            <img src="/createplaylearn.webp" alt="Create. Play. Learn." className="w-full max-w-md mx-auto rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500" />
                         </div>
                         {/* Decorative floating elements */}
                         <motion.div
