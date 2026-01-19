@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Section } from '../components/ui/Section';
 import { Button } from '../components/ui/Button';
-import { Palette, Calendar, MapPin, Phone, Star, Sparkles, Brush, CheckCircle, Clock } from 'lucide-react';
+import { Palette, Calendar, MapPin, Phone, Star, Sparkles, Brush } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export const ArtClasses: React.FC = () => {
